@@ -185,6 +185,7 @@ namespace aux {
 
 		// internal
 		announce_endpoint* find_endpoint(aux::listen_socket_handle const& s);
+		announce_endpoint const* find_endpoint(aux::listen_socket_handle const& s) const;
 	};
 
 }

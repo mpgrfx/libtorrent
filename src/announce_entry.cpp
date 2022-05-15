@@ -262,5 +262,13 @@ namespace aux {
 		if (aep != endpoints.end()) return &*aep;
 		else return nullptr;
 	}
+
+	announce_endpoint const* announce_entry::find_endpoint(aux::listen_socket_handle const& s) const
+	{
+		auto aep = std::find_if(endpoints.begin(), endpoints.end()
+			, [&](aux::announce_endpoint const& a) { return a.socket == s; });
+		if (aep != endpoints.end()) return &*aep;
+		else return nullptr;
+	}
 } // aux
 } // libtorrent

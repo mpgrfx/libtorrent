@@ -408,6 +408,7 @@ SOURCES = \
   torrent_peer.cpp                \
   torrent_peer_allocator.cpp      \
   torrent_status.cpp              \
+  tracker_list.cpp                \
   tracker_manager.cpp             \
   truncate.cpp                    \
   udp_socket.cpp                  \
@@ -649,6 +650,7 @@ HEADERS = \
   aux_/torrent_list.hpp             \
   aux_/torrent_peer.hpp             \
   aux_/torrent_peer_allocator.hpp   \
+  aux_/tracker_list.hpp             \
   aux_/tracker_manager.hpp          \
   aux_/udp_socket.hpp               \
   aux_/udp_tracker_connection.hpp   \
@@ -933,6 +935,7 @@ TEST_SOURCES = \
   test_torrent_info.cpp \
   test_torrent_list.cpp \
   test_tracker.cpp \
+  test_tracker_list.cpp \
   test_tracker_manager.cpp \
   test_truncate.cpp \
   test_transfer.cpp \
