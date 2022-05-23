@@ -291,6 +291,24 @@ TORRENT_TEST(test_deprioritize_tracker_tier)
 	TEST_EQUAL(tl[2].url, "http://a.com/announce");
 }
 
+TORRENT_TEST(test_add_empty)
+{
+	tracker_list tl;
+
+	tl.add_tracker(announce_entry(""));
+	TEST_EQUAL(tl.size(), 0);
+}
+
+TORRENT_TEST(test_replace_empty)
+{
+	tracker_list tl;
+
+	std::vector<lt::announce_entry> trackers;
+	trackers.emplace_back("");
+	tl.replace(trackers);
+	TEST_EQUAL(tl.size(), 0);
+}
+
 // TODO: last_working, last_working_url
 // TODO: enable_all
 // TODO: set_complete_sent

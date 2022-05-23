@@ -647,8 +647,6 @@ bool is_downloading_state(int const st)
 		if (m_trackers.empty()) return true;
 		if (!settings().get_bool(settings_pack::use_dht_as_fallback)) return true;
 
-		using std::begin;
-		using std::end;
 		return !m_trackers.any_verified();
 	}
 

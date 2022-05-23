@@ -161,6 +161,7 @@ void tracker_list::replace(std::vector<lt::announce_entry> const& aes)
 	int idx = 0;
 	for (auto const& ae : aes)
 	{
+		if (ae.url.empty()) continue;
 		auto const [iter, added] = m_url_index.insert(std::make_pair(ae.url, idx));
 		if (!added)
 		{
